@@ -272,11 +272,11 @@ Main:
 	Gui, Add, Text, x212 y260 w70 h20 , Token:
 	Gui, Add, Edit, x282 y260 w140 h20 vtoken3, %token3%
 	Gui, Add, Text, x212 y280 w70 h20 , Threads:
-	Gui, Add, Edit, x282 y280 w70 h20 vthreads3, %threads3%
+	Gui, Add, Edit, x282 y280 w60 h20 vthreads3, %threads3%
 	Gui, Add, Text, x212 y300 w70 h20 , CPU `%:
-	Gui, Add, Edit, x282 y300 w70 h20 vcpup3, %cpuu3%
+	Gui, Add, Edit, x282 y300 w60 h20 vcpup3, %cpuu3%
 	Gui, Add, Text, x212 y320 w70 h20 , CPU Priority:
-	Gui, Add, Edit, x282 y320 w70 h20 cpup3, %cpup3%
+	Gui, Add, Edit, x282 y320 w60 h20 cpup3, %cpup3%
 	Gui, Add, Text, x212 y340 w70 h20 , PoW Variant:
 	Gui, Add, Edit, x282 y340 w60 h20 vvari3, %vari3%
 	Gui, Add, Text, x462 y240 w70 h20 , Mining Pool 4:
@@ -301,7 +301,7 @@ Main:
 	Gui, Add, Text, x662 y280 w70 h20 , Threads:
 	Gui, Add, Edit, x732 y280 w60 h20 vthreads4, %threads4%
 	Gui, Add, Text, x662 y300 w70 h20 , CPU `%:
-	Gui, Add, Edit, x662 y300 w70 h20 vcpuu4, %cpuu4%
+	Gui, Add, Edit, x732 y300 w60 h20 vcpuu4, %cpuu4%
 	Gui, Add, Text, x662 y320 w70 h20 , CPU Priority:
 	Gui, Add, Edit, x732 y320 w60 h20 vcpup4, %cpup4%
 	Gui, Add, Text, x662 y340 w70 h20 , PoW Variant:
