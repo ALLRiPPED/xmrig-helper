@@ -17,7 +17,7 @@ When you first run the script/executable, it will create a `XMRIG-Helper.ini` fi
 # Screenshots
 
 <img src="https://i.imgur.com/zKNbMm9.png">
-<img src="https://i.imgur.com/YloeXQX.png">
+<img src="https://i.imgur.com/GmjqvcD.png">
 <img src="https://i.imgur.com/SxSvtKh.png">
 
 
