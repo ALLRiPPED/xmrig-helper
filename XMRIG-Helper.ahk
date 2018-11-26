@@ -425,11 +425,11 @@ GuiShow:
 	Gui, Margin, 0,0
 	Gui +LastFound
 	GUI_ID:=WinExist()
-	Gui, Show, h607 w885, XMRIG Mining Helper v0.6.0
+	Gui, Show, x341 y133 h607 w885,, XMRIG Mining Helper v0.6.0
 	DllCall("AnimateWindow",UInt,GUI_ID,UInt,750,UInt,0xa0000)
 Return
 #X::
-	Gui % (MainGui:=!MainGui) ? "Hide" : "Show"
+	Gui % (MainGui:=!MainGui) ? "Hide" : "Show", x341 y133 h607 w885, XMRIG Mining Helper v0.6.0
 return
 TrayReload:
 	Reload
