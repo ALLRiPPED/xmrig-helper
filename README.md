@@ -24,7 +24,7 @@ When you first run the script/executable, it will create a `XMRIG-Helper.ini` fi
 # Changelog
 
 ## v0.7.0
-Cleaned up the script more and added the ability to use the `--openCLVendor NVIDIA` or `--openCLVendor AMD` in the command line.
+Cleaned up the script more, and synced the version number to the stak helper.
 
 ## v0.6.0
 okay fixed a few discrepancies in the code and added a `Launch Pool #` Button for each pool
