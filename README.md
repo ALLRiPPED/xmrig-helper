@@ -1,4 +1,4 @@
-# XMRIG Helper v0.6.0
+# XMRIG Helper v0.7.0
 
 This was originally an idea I had for logging into the Silkroad Online server using the Bot369 bot cards to quickley login your game character(s) and your botcard in the presssing of just two keys.
 
@@ -16,12 +16,15 @@ When you first run the script/executable, it will create a `XMRIG-Helper.ini` fi
 
 # Screenshots
 
-<img src="https://i.imgur.com/0F6oZka.png">
-<img src="https://i.imgur.com/yXC50J6.png">
-<img src="https://i.imgur.com/eKKbGZQ.png">
+<img src="https://i.imgur.com/KrAqMN2.png">
+<img src="https://i.imgur.com/PZstEvV.png">
+<img src="https://i.imgur.com/czxb0sV.png">
 
 
 # Changelog
+
+## v0.7.0
+Cleaned up the script more and added the ability to use the `--openCLVendor NVIDIA` or `--openCLVendor AMD` in the command line.
 
 ## v0.6.0
 okay fixed a few discrepancies in the code and added a `Launch Pool #` Button for each pool

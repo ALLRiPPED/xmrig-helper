@@ -1,4 +1,4 @@
-; XMRIG Mining Helper v0.6.0
+; XMRIG Mining Helper v0.7.0
 ; Just a little something I came up with to help with crypto mining with xmrig.
 ; 
 ; With xmrig.exe and this script's SHIFT+F# hotkeys with your pool login information setup correctly,
@@ -19,9 +19,9 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #SingleInstance force ; Keeps you from running more than one of these at once, that can get really messy.
 IfNotExist, thepitster.jpg
-URLDownloadToFile, http://www.allripped.net/files/thepitster.jpg, thepitster.jpg
+	URLDownloadToFile, http://www.allripped.net/files/thepitster.jpg, thepitster.jpg
 IfNotExist, app.ico
-URLDownloadToFile, https://raw.githubusercontent.com/ALLRiPPED/xmrig-helper/master/app.ico, app.ico
+	URLDownloadToFile, https://raw.githubusercontent.com/ALLRiPPED/xmrig-helper/master/app.ico, app.ico
 	if(FileExist(A_ScriptDir "\app.ico"))
 	Menu,Tray,Icon,app.ico
 	Gui, Margin, 0,0
@@ -29,12 +29,11 @@ URLDownloadToFile, https://raw.githubusercontent.com/ALLRiPPED/xmrig-helper/mast
 	GUI_ID:=WinExist()
 	Gui, -Caption +AlwaysOnTop +Border
 	Gui, Add, Picture, , thepitster.jpg
-	Gui,Show, AutoSize Hide, XMRIG Mining Helper v0.6.0
+	Gui,Show, AutoSize Hide, XMRIG Mining Helper v0.7.0
 	DllCall("AnimateWindow",UInt,GUI_ID,Int,500,UInt,0xa0000)
 	Sleep 1000
 	DllCall("AnimateWindow",UInt,GUI_ID,Int,500,UInt,0x90000)
 	Gui, Destroy
-
 IfNotExist, XMRIG-Helper.ini
 {
 	Fileappend, [XMRIG]`r`n,%A_ScriptDir%\XMRIG-Helper.ini
@@ -108,11 +107,11 @@ IfNotExist, XMRIG-Helper.ini
 
 	Menu, Tray, Add, Show, GuiShow
 	Menu, Tray, Add
-	Menu, Tray, Add, XMRIG-Helper &Updates, XHelper
+	Menu, Tray, Add, XMRIG-Helper &Updates, ButtonXHelper
 	Menu, Tray, Add, XMRIG-Helper.&ini, TrayEditini
 	Menu, Tray, Add
-	Menu, Tray, Add, &ARHash.xyz, ARHash
-	Menu, Tray, Add, &XMRIG , XMRIG
+	Menu, Tray, Add, &ARHash.xyz, ButtonARHash
+	Menu, Tray, Add, &XMRIG , ButtonXMRIG
 	Menu, Tray, Add
 	Menu, Tray, Add, &Reload Helper, TrayReload
 	Menu, Tray, Add
@@ -138,7 +137,7 @@ IfNotExist, XMRIG-Helper.ini
 	IniRead, cpuu1, %A_ScriptDir%\XMRIG-Helper.ini, POOL 1, cpuu1, %A_space%
 	IniRead, cpup1, %A_ScriptDir%\XMRIG-Helper.ini, POOL 1, cpup1, %A_space%
 	IniRead, kalive1, %A_ScriptDir%\XMRIG-Helper.ini, POOL 1, kalive1, %A_space%
-	IniRead, pool2, %A_ScriptDir%\XMRIG-Helper.ini, XMRIG, pool2, %A_space%
+	IniRead, pool2, %A_ScriptDir%\XMRIG-Helper.ini, POOL 2, pool2, %A_space%
 	IniRead, address2, %A_ScriptDir%\XMRIG-Helper.ini, POOL 2, address2, %A_space%
 	IniRead, rigid2, %A_ScriptDir%\XMRIG-Helper.ini, POOL 2, rigid2, %A_space%
 	IniRead, pword2, %A_ScriptDir%\XMRIG-Helper.ini, POOL 2, pword2, %A_space%
@@ -323,14 +322,12 @@ Main:
 	Gui, Add, Text, x102 y230 w630 h20 , %xmrigdir%
 	Gui, Add, Button, x662 y190 w70 h20 , Browse
 	Gui, Add, Button, x652 y270 w80 h30 gOK, OK
-
 	Gui, Margin, 0,0
 	Gui +LastFound
 	GUI_ID:=WinExist()
-	Gui, Show, x341 y133 h607 w885, XMRIG Mining Helper v0.6.0
+	Gui, Show, x341 y133 h607 w885, XMRIG Mining Helper v0.7.0
 	DllCall("AnimateWindow",UInt,GUI_ID,UInt,750,UInt,0xa0000)
 Return
-
 OK:
 	Gui, Submit, NoHide  ; Save the input from the user to each control's associated variable.
 	Iniwrite, %pool1%, %A_ScriptDir%\XMRIG-Helper.ini, POOL 1, pool1
@@ -402,7 +399,7 @@ ButtonAbout:
 	GUI_ID:=WinExist()
 	Gui, -Caption +AlwaysOnTop +Border
 	Gui, Add, Picture, , thepitster.jpg
-	Gui,Show,Autosize Hide,XMRIG Helper v0.6.0
+	Gui,Show,Autosize Hide,XMRIG Helper v0.7.0
 	DllCall("AnimateWindow",UInt,GUI_ID,Int,500,UInt,0xa0000)
 	Sleep 3000
 	DllCall("AnimateWindow",UInt,GUI_ID,Int,500,UInt,0x90000)
@@ -412,25 +409,25 @@ Return
 GuiEscape:
 GuiClose:
 	DllCall("AnimateWindow",UInt,GUI_ID,UInt,750,UInt,0x90000)
-	Goto, OK
-	Gui, Hide
+	Gui, Submit, Hide
 Return
 GuiMinimize:
 	DllCall("AnimateWindow",UInt,GUI_ID,UInt,750,UInt,0x90000)
-	Goto, OK
-	Gui, Hide
+	Gui, Submit, Hide
 Return
 GuiShow:
 	Gui, Margin, 0,0
 	Gui +LastFound
 	GUI_ID:=WinExist()
-	Gui, Show, x341 y133 h607 w885,, XMRIG Mining Helper v0.6.0
+	Gui, Show, x341 y133 h607 w885,, XMRIG Mining Helper v0.7.0
 	DllCall("AnimateWindow",UInt,GUI_ID,UInt,750,UInt,0xa0000)
 Return
 #X::
-	Gui % (MainGui:=!MainGui) ? "Hide" : "Show", x341 y133 h607 w885, XMRIG Mining Helper v0.6.0
+	Gui % (MainGui:=!MainGui) ? "Hide" : "Show", x341 y133 h607 w885, XMRIG Mining Helper v0.7.0
+	Goto, OK
 return
 TrayReload:
+	Gui, Submit
 	Reload
 Return
 TrayEdit:
@@ -476,8 +473,7 @@ ButtonXMRIG:
 Return
 ButtonHideMe:
 	DllCall("AnimateWindow",UInt,GUI_ID,UInt,750,UInt,0x90000)
-	Gui, Hide
-	Goto, OK
+	Gui, Submit, Hide
 Return
 Trayexit:
 ButtonClose:
@@ -545,132 +541,92 @@ ButtonClose:
 	Iniwrite, %kalive4%, %A_ScriptDir%\XMRIG-Helper.ini, POOL 4, kalive4
 	Iniwrite, %xmrigdir%, %A_ScriptDir%\XMRIG-Helper.ini, DIR, xmrigdir
 ExitApp
-XHelper:
-	Run, https://github.com/ALLRiPPED/xmrig-helper
-Return
-XMRIG:
-	Run, https://github.com/ALLRiPPED/xmrig/releases
-Return
-ARHash:
-	Run, https://arhash.xyz/
-Return
-
 LP1:
 +F5::
+	Gui, Submit, NoHide
 	SetWorkingDir %xmrigdir%
 	if (background1 = 1)
-	{
 		bkg1 := "-B "
-	}else{
+	else
 		bkg1 :=
-	}
 	if (apiaccess1 = 1)
-	{
 		apiacc1 := "--api-access-token " token1 " --api-no-restricted "
-	}else{
+	else
 		apiacc1 :=
-	}
 	if (kalive1 = 1) 
-	{
 		klive1 := "-k "
-	}else{
+	else
 		klive1 :=
-	}	
 	if (nicehash1 = 1)
-	{
 		nh1 := "--nicehash"
-	}else{
+	else
 		nh1 :=
-	}	
 	Run, %xmrigdir%\xmrig.exe -a %algo1% %bkg1%--api-port %htport1% --api-worker-id %rigid1% --rig-id %rigid1% %apiacc1%-t %threads1% --max-cpu-usage %cpuu1% --cpu-priority %cpup1% -o %pool1% -u %address1% -p %pword1% --variant %vari1% %klive1% %nh1%
 return
-
 LP2:
 +F6::
+	Gui, Submit, NoHide
 	SetWorkingDir %xmrigdir%
 	if (background2 = 1)
-	{
 		bkg2 := "-B "
-	}else{
+	else
 		bkg2 :=
-	}
 	if (apiaccess2 = 1)
-	{
 		apiacc2 := "--api-access-token " token2 " --api-no-restricted "
-	}else{
+	else
 		apiacc2 :=
-	}
 	if (kalive2 = 1) 
-	{
 		klive2 := "-k "
-	}else{
+	else
 		klive2 :=
-	}	
 	if (nicehash2 = 1)
-	{
 		nh2 := "--nicehash"
-	}else{
+	else
 		nh2 :=
-	}	
 	Run, %xmrigdir%\xmrig.exe -a %algo2% %bkg2%--api-port %htport2% --api-worker-id %rigid2% --rig-id %rigid2% %apiacc2%-t %threads2% --max-cpu-usage %cpuu2% --cpu-priority %cpup2% -o %pool2% -u %address2% -p %pword2% --variant %vari2% %klive2% %nh2%
 return
-
 LP3:
 +F7::
+	Gui, Submit, NoHide
 	SetWorkingDir %xmrigdir%
 	if (background3 = 1)
-	{
 		bkg3 := "-B "
-	}else{
+	else
 		bkg3 :=
-	}
 	if (apiaccess3 = 1)
-	{
 		apiacc3 := "--api-access-token " token3 " --api-no-restricted "
-	}else{
+	else
 		apiacc3 :=
-	}
 	if (kalive3 = 1) 
-	{
 		klive3 := "-k "
-	}else{
+	else
 		klive3 :=
-	}	
 	if (nicehash3 = 1)
-	{
 		nh3 := "--nicehash"
-	}else{
+	else
 		nh3 :=
-	}	
 	Run, %xmrigdir%\xmrig.exe -a %algo3% %bkg3%--api-port %htport3% --api-worker-id %rigid3% --rig-id %rigid3% %apiacc3%-t %threads3% --max-cpu-usage %cpuu3% --cpu-priority %cpup3% -o %pool3% -u %address3% -p %pword3% --variant %vari3% %klive3% %nh3%
 return
 
 LP4:
 +F8::
+	Gui, Submit, NoHide
 	SetWorkingDir %xmrigdir%
 	if (background4 = 1)
-	{
 		bkg4 := "-B "
-	}else{
+	else
 		bkg4 :=
-	}
 	if (apiaccess4 = 1)
-	{
 		apiacc4 := "--api-access-token " token4 " --api-no-restricted "
-	}else{
+	else
 		apiacc4 :=
-	}
 	if (kalive4 = 1) 
-	{
 		klive4 := "-k "
-	}else{
+	else
 		klive4 :=
-	}	
 	if (nicehash4 = 1)
-	{
 		nh4 := "--nicehash"
-	}else{
+	else
 		nh4 :=
-	}	
 	Run, %xmrigdir%\xmrig.exe -a %algo4% %bkg4%--api-port %htport4% --api-worker-id %rigid4% --rig-id %rigid4% %apiacc4%-t %threads4% --max-cpu-usage %cpuu4% --cpu-priority %cpup4% -o %pool4% -u %address4% -p %pword4% --variant %vari4% %klive4% %nh4%
 return
