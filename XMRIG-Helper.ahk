@@ -35,6 +35,7 @@ IfNotExist, XMRIG-Helper.ini
 	Fileappend, algo1=cryptonight/2`r`n,%A_ScriptDir%\XMRIG-Helper.ini
 	Fileappend, htport1=41000`r`n,%A_ScriptDir%\XMRIG-Helper.ini
 	Fileappend, background1=0`r`n,%A_ScriptDir%\XMRIG-Helper.ini
+	Fileappend, token1=allripped`r`n,%A_ScriptDir%\XMRIG-Helper.ini
 	Fileappend, apiaccess1=0`r`n,%A_ScriptDir%\XMRIG-Helper.ini
 	Fileappend, vari1=1`r`n,%A_ScriptDir%\XMRIG-Helper.ini
 	Fileappend, threads1=0`r`n,%A_ScriptDir%\XMRIG-Helper.ini
@@ -51,6 +52,7 @@ IfNotExist, XMRIG-Helper.ini
 	Fileappend, algo2=cryptonight`r`n,%A_ScriptDir%\XMRIG-Helper.ini
 	Fileappend, htport2=42000`r`n,%A_ScriptDir%\XMRIG-Helper.ini
 	Fileappend, background2=0`r`n,%A_ScriptDir%\XMRIG-Helper.ini
+	Fileappend, token2=allripped`r`n,%A_ScriptDir%\XMRIG-Helper.ini
 	Fileappend, apiaccess2=0`r`n,%A_ScriptDir%\XMRIG-Helper.ini
 	Fileappend, vari2=1`r`n,%A_ScriptDir%\XMRIG-Helper.ini
 	Fileappend, threads2=0`r`n,%A_ScriptDir%\XMRIG-Helper.ini
@@ -67,6 +69,7 @@ IfNotExist, XMRIG-Helper.ini
 	Fileappend, algo3=cn/1`r`n,%A_ScriptDir%\XMRIG-Helper.ini
 	Fileappend, htport3=43000`r`n,%A_ScriptDir%\XMRIG-Helper.ini
 	Fileappend, background3=0`r`n,%A_ScriptDir%\XMRIG-Helper.ini
+	Fileappend, token3=allripped`r`n,%A_ScriptDir%\XMRIG-Helper.ini
 	Fileappend, apiaccess3=0`r`n,%A_ScriptDir%\XMRIG-Helper.ini
 	Fileappend, vari3=1`r`n,%A_ScriptDir%\XMRIG-Helper.ini
 	Fileappend, threads3=0`r`n,%A_ScriptDir%\XMRIG-Helper.ini
@@ -83,6 +86,7 @@ IfNotExist, XMRIG-Helper.ini
 	Fileappend, algo4=cn-lite`r`n,%A_ScriptDir%\XMRIG-Helper.ini
 	Fileappend, htport4=44000`r`n,%A_ScriptDir%\XMRIG-Helper.ini
 	Fileappend, background4=0`r`n,%A_ScriptDir%\XMRIG-Helper.ini
+	Fileappend, token4=allripped`r`n,%A_ScriptDir%\XMRIG-Helper.ini
 	Fileappend, apiaccess4=0`r`n,%A_ScriptDir%\XMRIG-Helper.ini
 	Fileappend, vari4=1`r`n,%A_ScriptDir%\XMRIG-Helper.ini
 	Fileappend, threads4=0`r`n,%A_ScriptDir%\XMRIG-Helper.ini
@@ -314,7 +318,7 @@ Main:
 	Gui, Add, Edit, x502 y70 w130 h20 vaddress2 hwndEdit13, %address2%
 	Gui, Add, Text, x462 y90 w40 h20 , Rig ID:
 	Gui, Add, Edit, x502 y90 w130 h20 vrigid2 hwndEdit14, %rigid2%
-	Gui, Add, Text, x462 y110 w40 h20 , Password:
+	Gui, Add, Text, x462 y110 w40 h20 , Pass:
 	Gui, Add, Edit, x502 y110 w130 h20 vpword2 hwndEdit15, %pword2%
 	Gui, Add, Text, x462 y130 w40 h20 , ALGO:
 	Gui, Add, Edit, x502 y130 w130 h20 valgo2 hwndEdit16, %algo2%
@@ -348,7 +352,7 @@ Main:
 	Gui, Add, Edit, x62 y260 w130 h20 vaddress3 hwndEdit24, %address3%
 	Gui, Add, Text, x22 y280 w40 h20 , Rig ID:
 	Gui, Add, Edit, x62 y280 w130 h20 vrigid3 hwndEdit25, %rigid3%
-	Gui, Add, Text, x22 y300 w40 h20 , Password:
+	Gui, Add, Text, x22 y300 w40 h20 , Pass:
 	Gui, Add, Edit, x62 y300 w130 h20 vpword3 hwndEdit26, %pword3%
 	Gui, Add, Text, x22 y320 w40 h20 , ALGO:
 	Gui, Add, Edit, x62 y320 w130 h20 valgo3 hwndEdit27, %algo3%
@@ -382,7 +386,7 @@ Main:
 	Gui, Add, Edit, x512 y260 w130 h20 vaddress4 hwndEdit35, %address4%
 	Gui, Add, Text, x462 y280 w40 h20 , Rig ID:
 	Gui, Add, Edit, x512 y280 w130 h20 vrigid4 hwndEdit36, %rigid4%
-	Gui, Add, Text, x462 y300 w40 h20 , Password:
+	Gui, Add, Text, x462 y300 w40 h20 , Pass:
 	Gui, Add, Edit, x512 y300 w130 h20 vpword4 hwndEdit37, %pword4%
 	Gui, Add, Text, x462 y320 w40 h20 , ALGO:
 	Gui, Add, Edit, x512 y320 w130 h20 valgo4 hwndEdit38, %algo4%
