@@ -7,10 +7,10 @@ SetWorkingDir %A_ScriptDir%
 #SingleInstance force
 IfNotExist, thepitster.jpg
 	URLDownloadToFile, https://raw.githubusercontent.com/ALLRiPPED/xmrig-helper/master/thepitster.jpg, thepitster.jpg
-IfNotExist, app.ico
-	URLDownloadToFile, https://raw.githubusercontent.com/ALLRiPPED/xmrig-helper/master/app.ico, app.ico
 IfNotExist, arcryptologo.png
 	URLDownloadToFile, https://raw.githubusercontent.com/ALLRiPPED/xmrig-helper/master/arcryptologo.png, arcryptologo.png
+IfNotExist, app.ico
+	URLDownloadToFile, https://raw.githubusercontent.com/ALLRiPPED/xmrig-helper/master/app.ico, app.ico
 	if(FileExist(A_ScriptDir "\app.ico"))
 	Menu,Tray,Icon,app.ico
 	Gui, Margin, 0,0
