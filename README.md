@@ -22,12 +22,16 @@ When you first run the script/executable, it will create a `XMRIG-Helper.ini` fi
 <img src="https://i.imgur.com/pB4izmK.png">
 <img src="https://i.imgur.com/DiJA8f6.png">
 <img src="https://i.imgur.com/6yfnx9q.png">
+
 ## Button Effects
 Normal
+
 <img src="https://i.imgur.com/zmsozDF.png">
 Mouseover
+
 <img src="https://i.imgur.com/ndIo0Ne.png">
 Clicked/Pressed
+
 <img src="https://i.imgur.com/RgLPQZM.png">
 
 # Changelog
