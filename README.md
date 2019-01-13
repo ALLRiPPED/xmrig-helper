@@ -1,4 +1,4 @@
-# XMRIG Helper v1.0.0
+# XMRIG Helper v1.0.1
 
 This was originally an idea I had for logging into the Silkroad Online server using the Bot369 bot cards to quickley login your game character(s) and your botcard in the presssing of just two keys.
 
@@ -19,9 +19,9 @@ When you first run the script/executable, it will create a `XMRIG-Helper.ini` fi
 
 # Screenshots
 
-<img src="https://i.imgur.com/pB4izmK.png">
-<img src="https://i.imgur.com/DiJA8f6.png">
-<img src="https://i.imgur.com/6yfnx9q.png">
+<img src="https://i.imgur.com/ILX0Ks2.png">
+<img src="https://i.imgur.com/aIHHArM.png">
+<img src="https://i.imgur.com/da1y7h8.png">
 
 ## Button Effects
 Normal
@@ -35,6 +35,9 @@ Clicked/Pressed
 <img src="https://i.imgur.com/RgLPQZM.png">
 
 # Changelog
+
+## V1.0.1
+Replaced dead coins buttons with live ones.
 
 ## v1.0.0
 Did a complete rework of the GUI and Buttons, added more to it and really cleaned it up.
