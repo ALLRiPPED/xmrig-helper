@@ -212,13 +212,13 @@ Main:
 	Opt4 := [0, 0xC0A0A0A0, , 0xC0606000]
 	If !ImageButton.Create(HXHelper, Opt1, Opt2, Opt3, Opt4)
 		MsgBox, 0, ImageButton Error XHelper, % ImageButton.LastError
-	Gui, Add, Button, x172 y490 w70 h30 hwndHMonkeytips, Monkeytips
+	Gui, Add, Button, x172 y490 w70 h30 hwndHIridium, Iridium
 	Opt1 := [6, "Black", "Lime", "Black"]
 	Opt2 := [ , "Black", "Black", "Lime"]
 	Opt3 := {4: "Red"}
 	Opt4 := [0, 0xC0A0A0A0, , 0xC0606000]
-	If !ImageButton.Create(HMonkeytips, Opt1, Opt2, Opt3, Opt4)
-		MsgBox, 0, ImageButton Error Monkeytips, % ImageButton.LastError
+	If !ImageButton.Create(HIridium, Opt1, Opt2, Opt3, Opt4)
+		MsgBox, 0, ImageButton Error Iridium, % ImageButton.LastError
 	Gui, Add, Button, x172 y450 w70 h30 hwndHXCA, X-CASH
 	Opt1 := [6, "Black", "Lime", "Black"]
 	Opt2 := [ , "Black", "Black", "Lime"]
@@ -607,8 +607,8 @@ Return
 ButtonCPACoin:
 	Run, https://cryptopay.org.za/
 Return
-ButtonMonkeytips:
-	Run, https://monkeytips.top/
+ButtonIridium:
+	Run, https://ird.cash/
 Return
 ButtonARQMA:
 	Run, https://arqma.com/
